@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.action_overviewFragment_to_addPortalFragment
             )
         }
+
         fabToggler()
     }
 
