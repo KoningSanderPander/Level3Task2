@@ -33,8 +33,4 @@ class PortalCardAdapter(private val portalCards: List<PortalCard>, private val c
     override fun getItemCount(): Int {
         return portalCards.size
     }
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int, payloads: MutableList<Any>) {
-        holder.dataBind(portalCards[position], clickListener)
-    }
 }

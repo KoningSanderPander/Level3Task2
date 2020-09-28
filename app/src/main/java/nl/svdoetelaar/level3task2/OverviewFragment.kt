@@ -26,7 +26,6 @@ class OverviewFragment : Fragment() {
     private lateinit var binding: OverviewFragmentBinding
     private var customTabHelper: CustomTabHelper = CustomTabHelper()
 
-
     private val portals = arrayListOf<PortalCard>()
     private val portalAdapter = PortalCardAdapter(portals) { portalCard: PortalCard ->
         portalCardClicked(
@@ -122,7 +121,7 @@ class OverviewFragment : Fragment() {
 
         val customTabsIntent = builder.build()
 
-        // check is chrom available
+        // check is chrome available
         val packageName = customTabHelper.getPackageNameToUse(this.requireContext(), url)
 
         if (packageName == null) {
