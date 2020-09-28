@@ -1,6 +1,10 @@
 package nl.svdoetelaar.level3task2
 
-data class PortalCard (
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+data class PortalCard(
     var title: String,
-    var link: String
-)
+    var url: String
+) : Parcelable
