@@ -2,6 +2,7 @@ package nl.svdoetelaar.level3task2
 
 import android.app.PendingIntent
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -103,15 +104,14 @@ class OverviewFragment : Fragment() {
             intent,
             PendingIntent.FLAG_UPDATE_CURRENT)
 
-        // add menu item to oveflow
         builder.addMenuItem("Sample item", pendingIntent)
 
         // menu item icon
-        // val bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher)
-        // builder.setActionButton(bitmap, "Android", pendingIntent, true)
+         val bitmap = BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher)
+         builder.setActionButton(bitmap, "Android", pendingIntent, true)
 
         // modify back button icon
-        // builder.setCloseButtonIcon(bitmap)
+         builder.setCloseButtonIcon(bitmap)
 
         // show website title
         builder.setShowTitle(true)
